@@ -114,5 +114,16 @@
             context
         }
     }
+
+    chrome.runtime.onMessage.addListener(function(msg) {
+        switch(msg.command) {
+            case 'enable':
+                window.Spotlight.enable();
+            break;
+            case 'disable':
+                window.Spotlight.disable();
+            break;
+        }
+    });
     
-}(window)); 
+}(window));

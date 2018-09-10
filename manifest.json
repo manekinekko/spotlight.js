@@ -1,14 +1,15 @@
 {
   "name": "Spotlight.js",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "manifest_version": 2,
   "description": "A JavaScript library for the Logitech Spotlight presentation remote control.",
   "homepage_url": "https://github.com/manekinekko/spotlight.js",
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "all_frames": true,
-    "js":      ["index.js"]
-  }],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["index.js"]
+    }
+  ],
   "browser_action": {
     "default_title": "Click to toggle Spotlight.js",
     "default_icon": {
