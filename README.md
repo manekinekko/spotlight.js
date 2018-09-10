@@ -1,5 +1,5 @@
 
-![spotlight js white 920x680](https://user-images.githubusercontent.com/1699357/45272065-66172400-b4ab-11e8-8467-67209a3b317b.png)
+![spotlight js white 920x680](https://github.com/manekinekko/spotlight.js/blob/master/assets/spotlight_128.png?raw=true)
 
 A JavaScript library for the Logitech Spotlight presentation remote control. Use this extension to emulate the Logitech Spotlight behavior on unsupported OS (Chrome OS, Linux®).
 
