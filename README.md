@@ -3,7 +3,7 @@
 
 A JavaScript library for the Logitech Spotlight presentation remote control. Use this extension to emulate the Logitech Spotlight behavior on unsupported OS (Chrome OS, Linux®).
 
-NOTE: This library can also be used to add a spotlight effect in your Web prensentations, using any mouse 🤷‍
+NOTE: This library can also be used to add a spotlight effect in your Web presentations, using any mouse 🤷‍
 
 <p>
   <a href="https://chrome.google.com/webstore/detail/dmhonnnbjocamhnignjockjighobjpje/publish-accepted?authuser=1&hl=fr">
