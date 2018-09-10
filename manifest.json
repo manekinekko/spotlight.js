@@ -11,7 +11,7 @@
     "persistent": true
   },
   "browser_action": {
-    "default_title": "Spotlight.js running"
+    "default_title": "Click to run Spotlight.js"
   },
   "icons": { 
     "16": "assets/spotlight_16.png",
