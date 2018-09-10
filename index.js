@@ -1,6 +1,6 @@
 window.addEventListener('ready', onReady);
 
-function onReady() {
+(function onReady() {
 
     let timer;
     const mouse = { down: false };
@@ -49,7 +49,7 @@ function onReady() {
 
     }, false);
 
-}
+})();
 
 function getMousePosition(canvas, evt) {
 
