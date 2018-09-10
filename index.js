@@ -1,5 +1,3 @@
-window.addEventListener('ready', onReady);
-
 (function onReady() {
 
     let timer;
