@@ -11,12 +11,17 @@
     "persistent": true
   },
   "browser_action": {
-    "default_title": "Click to run Spotlight.js"
+    "default_title": "Click to toggle Spotlight.js",
+    "default_icon": {
+      "16": "assets/spotlight_16.png",
+      "24": "assets/spotlight_24.png",
+      "32": "assets/spotlight_32.png"
+    }
   },
   "icons": { 
-    "16": "assets/spotlight_16.png",
-    "48": "assets/spotlight_48.png",
-    "128": "assets/spotlight_128.png"
+    "16": "assets/spotlight_white_16.png",
+    "48": "assets/spotlight_white_48.png",
+    "128": "assets/spotlight_white_128.png"
   },
   "permissions": [
     "https://*/*",
