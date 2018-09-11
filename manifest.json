@@ -6,12 +6,15 @@
   "homepage_url": "https://github.com/manekinekko/spotlight.js",
   "content_scripts": [
     {
-      "matches": ["http://*/*"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": true,
       "js": ["index.js"]
     }
   ],
   "browser_action": {
-    "default_title": "Click to toggle Spotlight.js",
+    "default_title": "Spotlight.js",
     "default_icon": {
       "16": "assets/spotlight_16.png",
       "24": "assets/spotlight_24.png",

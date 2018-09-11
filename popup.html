@@ -10,7 +10,7 @@
 <style>
     body, html {
         width: 400px;
-        height: 500px;;
+        height: 600px;
     }
     h2 {
         font-size: 85px;
@@ -24,9 +24,6 @@
     span.mdl-layout-title {
         color: white;
     }
-    section.{
-        min-height: 130px;
-    }
     section > div {
         display: flex;
     }
@@ -34,16 +31,23 @@
         border-color: #50b9fb;
     }
     section > div.effect-item {
-        margin: 2px;
         cursor: pointer;
-        border: 1px solid white;
+        border: 2px solid white;
         transition: border 0.2s;
     }
     section > div.effect-item:hover {
-        border: 1px solid #fe945d;
+        border-color: #fe945d;
+    }
+    div[data-config] {
+        border: 1px solid lightgrey;
+        margin-top: -8px;
+        border-top: none;
     }
     div[data-config] h5 {
         text-align: center;
+    }
+    .page-content {
+        margin: 10px;
     }
     div.actions--center {
         text-align: center;
@@ -52,7 +56,10 @@
         width: 40px;
     }
     .mdl-switch.is-checked .mdl-switch__thumb {
-        background: #fe945d;
+        background: rgb(254, 148, 93);
+    }
+    .mdl-switch.is-checked .mdl-switch__track {
+        background: rgba(254, 148, 93, 0.5);
     }
     .mdl-footer {
         min-height: 20px;
@@ -82,6 +89,9 @@
         border-radius: 50px;
         margin: 28px 9px;
     }
+    .mdl-list__item-primary-content i.material-icons {
+        margin: 0 15px 0px 0px
+    }
     @media screen and (max-width: 1024px) {
         .mdl-layout__header {
             display: block;
@@ -105,7 +115,7 @@
         z-index: 10;
         opacity: 0.9;
     }
-    #backdrop.application-disabled {
+    #backdrop.application-enabled {
         display: none;
     }
     .hide {
@@ -137,7 +147,9 @@
             <section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                     <section class="mdl-color--white mdl-grid">
-                        <div class="effect-item effect--selected" data-type="spot">
+
+                        <!-- spot effect -->
+                        <div class="mdl-cell mdl-cell--12-col effect-item effect--selected" data-type="0">
                             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone effect--spot">
                                 <div class="section__circle-container__circle section__circle--big"></div>
                             </div>
@@ -146,17 +158,19 @@
                                 Use this to enable the spot highlight effect.
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--12-col" data-config="spot">
+                        <div class="mdl-cell mdl-cell--12-col" data-config="0">
                             <div class="mdl-card__supporting-text">
                                 <h5>Spot size</h5>
-                                <input class="mdl-slider mdl-js-slider" type="range" id="spotSizeValue" min="5" max="300" value="130" step="1">
+                                <input class="mdl-slider mdl-js-slider" type="range" id="spot-size-input" min="30" max="300"
+                                    value="130" step="1">
                             </div>
                             <div class="actions--center mdl-card__actions">
-                                <h2 id="spot-size">130</h2>
+                                <h2 id="spot-size-label">130</h2>
                             </div>
                         </div>
-                
-                        <div class="effect-item" data-type="laser">
+
+                        <!-- laser effect -->
+                        <div class="mdl-cell mdl-cell--12-col effect-item" data-type="1">
                             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone effect--laser">
                                 <div class="section__circle-container__circle section__circle--big"></div>
                             </div>
@@ -165,15 +179,43 @@
                                 Use this to enable the laser pointer effect.
                             </div>
                         </div>
+                        <div class="mdl-cell mdl-cell--12-col" data-config="1">
+                            <div class="mdl-card__supporting-text">
+                                <h5>Laser size</h5>
+                                <input class="mdl-slider mdl-js-slider" type="range" id="laser-size-input" min="5" max="30"
+                                    value="10" step="1">
+                            </div>
+                            <div class="actions--center mdl-card__actions">
+                                <h2 id="laser-size-label">10</h2>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </section>
+
+            <ul class="mdl-list mdl-shadow--2dp">
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons">control_camera</i>
+                        Enable Remote Controller
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="mouse-mode">
+                            <input type="checkbox" id="mouse-mode" class="mdl-switch__input" />
+                        </label>
+                    </span>
+                </li>
+            </ul>
 
             <div class="mdl-card mdl-cell mdl-cell--12-col mdl-footer">
                 <div class="mdl-card__actions">
                     <a href="https://twitter.com/manekinekko" class="mdl-button">
                         <img src="./assets/twitter.png" alt="Twitter logo" width="20">
                         Made by Wassim Chegham
+                    </a>
+                    <a href="https://github.com/manekinekko/spotlight.js" class="mdl-button">
+                        <img src="./assets/github.svg" alt="Github logo" width="20">
+                        Contribute on Github
                     </a>
                 </div>
             </div>
