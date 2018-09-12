@@ -8,7 +8,7 @@ NOTE: This library can also be used to add a spotlight effect in your Web presen
 
 ## Youtube tutorial video
 
-<a href="https://www.youtube.com/embed/w0v2xVIxCZk">
+<a href="https://www.youtube.com/watch?v=w0v2xVIxCZk">
   <img src="https://user-images.githubusercontent.com/1699357/45394578-a7394080-b631-11e8-96fe-512607da73b9.png" />
 </a>
 
